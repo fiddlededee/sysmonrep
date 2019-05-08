@@ -1,0 +1,53 @@
+:lang: ru
+:doctype: article 
+include::attributes.adoc[]
+= Использование информационных систем Федеральной службы по{nbsp}надзору в{nbsp}сфере транспорта на{nbsp}{todaytime}
+include::_doc_general_attributes.adoc[]
+:toclevels: 3
+:toc: left
+
+== Общая статистика входов
+
+=== Входы за сегодняшний день ({today})
+
+[cols=".^2, ^.^1, ^.^1", options="header"]
+,===
+include::rs_today.csv[]
+,===
+
+=== Входы за вчерашний день ({yesterday})
+
+[cols=".^2, ^.^1, ^.^1", options="header"]
+,===
+include::rs_yesterday.csv[]
+,===
+
+
+=== Входы за текущую неделю ({startweek} -- {today})
+
+[cols=".^2, ^.^1, ^.^1", options="header"]
+,===
+include::rs_week.csv[]
+,===
+
+
+
+=== Входы за предыдущую неделю ({startprevweek} -- {endprevweek})
+
+[cols=".^2, ^.^1, ^.^1", options="header"]
+,===
+include::rs_prevweek.csv[]
+,===
+
+== Подробная ежедневная статистика ({startprevweek} -- {today})
+
+[cols="^.^1, ^.^1, ^.^1", options="header"]
+|===
+|Дата
+|Количество заходов (без учета повторных заходов в течение дня)
+|Количество заходов (всего)
+
+include::rs_days.adoc[]
+
+
+|===

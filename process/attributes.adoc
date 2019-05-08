@@ -1,0 +1,6 @@
+:today: 08.05.2019
+:todaytime: 08.05.2019 19:06
+:yesterday: 07.05.2019
+:startprevweek: 29.04.2019
+:endprevweek: 05.05.2019
+:startweek: 06.05.2019
