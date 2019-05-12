@@ -1,24 +1,43 @@
 = Установка
 
+== Клонирование проекта
+
+* git clone https://github.com/fiddlededee/sysmonrep.git /usr/sysmonrep
+
 == Установка asciidoctor
 
 * apt-get install ruby-full
 * gem install asciidoctor
 
 === Установка конвертера в pdf
+
 * apt install openjdk-8-jre-headless
 * apt install openjdk-8-jdk-headless
-* git clone https://github.com/asciidoctor/asciidoctor-fop
-* asciidoctor -b docbook -d book -a data-uri! README.adoc
+* git clone https://github.com/asciidoctor/asciidoctor-fopub.git /home/asciidoctor-fopub/fopub
+* cd /home/asciidoctor-fopub/fopub
++ Для установки fopub первый раз его  необходимо запустить из его же каталога (у меня по-другому не получалось)
+
+* asciidoctor -b docbook -d book -a data-uri! README.adoc 
 * vim /etc/java-8-openjdk/accessibility.properties
-* Comment: assistive_technologies=org.GNOME.Accessibility.AtkWrapper
++ Comment: assistive_technologies=org.GNOME.Accessibility.AtkWrapper
+
 * ./fopub README.xml
++ иногда требуется запустить несколько раз
 
 == Установка шрифтов
-* apt install fontcondig
+
+* apt install fontconfig
+* fc-list
+* Скопируйте недостающие шрифты из директории проекта в директорию шрифтов (например, /usr/share/fonts)
 
 == Установка clickhouse-client
+
 * wget -q -O - https://repo.yandex.ru/clickhouse/CLICKHOUSE-KEY.GPG | apt-key add -
 * sudo apt-get update
 * sudo apt-get install clickhouse-client
 * dpkg-reconfigure tzdata
+* Введите пользователя и пароль в config.xml
+
+== Запуск
+
+* /usr/sysmonrep/process/compile.sh

@@ -2,6 +2,6 @@
 	<host>10.1.5.164</host>
 	<!--port>8123</port-->
 	<user>default</user>
-	<password>cTfAvW5M</password>
+	<password>123</password>
 	<!--secure>False</secure-->
 </config>
