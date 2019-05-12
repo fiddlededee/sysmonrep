@@ -36,7 +36,8 @@
 * sudo apt-get update
 * sudo apt-get install clickhouse-client
 * dpkg-reconfigure tzdata
-* Введите пользователя и пароль в config.xml
+* скопируйте config.xml.template в config.xml
+* Введите host, пользователя и пароль в config.xml
 
 == Запуск
 

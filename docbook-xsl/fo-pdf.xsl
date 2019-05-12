@@ -624,7 +624,7 @@
 		</xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="table.table.properties">
-		<xsl:attribute name="font-family">Liberation Sans,Calibri</xsl:attribute>
+		<xsl:attribute name="font-family">PT Sans,Calibri,DejaVu Sans</xsl:attribute>
 		<xsl:attribute name="font-size">
 			<xsl:value-of select="$body.font.master * $met.table.font.size"/>
 			<xsl:text>pt</xsl:text>
