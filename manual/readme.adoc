@@ -1,7 +1,7 @@
 = Установка
 
 == Клонирование проекта
-
+ 
 * git clone https://github.com/fiddlededee/sysmonrep.git /usr/sysmonrep
 
 == Установка asciidoctor
@@ -13,14 +13,13 @@
 
 * apt install openjdk-8-jre-headless
 * apt install openjdk-8-jdk-headless
-* git clone https://github.com/asciidoctor/asciidoctor-fopub.git /home/asciidoctor-fopub/fopub
-* cd /home/asciidoctor-fopub/fopub
-+ Для установки fopub первый раз его  необходимо запустить из его же каталога (у меня по-другому не получалось)
-
-* asciidoctor -b docbook -d book -a data-uri! README.adoc 
 * vim /etc/java-8-openjdk/accessibility.properties
 + Comment: assistive_technologies=org.GNOME.Accessibility.AtkWrapper
+* git clone https://github.com/asciidoctor/asciidoctor-fopub.git /home/asciidoctor-fopub
+* cd /home/asciidoctor-fopub
++ Примечание. Для установки fopub первый раз его  необходимо запустить из его же каталога (у меня по-другому не получалось)
 
+* asciidoctor -b docbook -d book -a data-uri! README.adoc 
 * ./fopub README.xml
 + иногда требуется запустить несколько раз
 
