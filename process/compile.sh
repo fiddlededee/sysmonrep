@@ -1,6 +1,6 @@
 #!/bin/bash
-#cd "$(dirname "$0")"
-mkdir -p ../out/*
+cd "$(dirname "$0")"
+mkdir -p ../out
 rm ../out/*
 cp *.adoc ../out
 cat rs_system_list.sql | clickhouse-client -mn --config-file config.xml -f "CSVWithNames" >"../out/rs_today.csv"   
@@ -13,7 +13,5 @@ cat rs_attributes.sql | clickhouse-client -mn --config-file config.xml -f "CSV" 
 cat rs_days.sql | clickhouse-client -mn --config-file config.xml -f "CSV" | sed 's/"//g' >"../out/rs_days.adoc"
 asciidoctor -b docbook -d book -a doctype=book ../out/report.adoc -D ../out
 asciidoctor -b html5 -d book -a data-uri! ../out/report.adoc -D ../out
-/home/asciidoctor-fopub/fopub ../out/report.xml
+/home/asciidoctor-fopub/fopub -t ../docbook-xsl ../out/report.xml
 echo converted
-
-
