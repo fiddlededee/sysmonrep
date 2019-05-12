@@ -1,4 +1,6 @@
 #!/bin/bash
+#cd "$(dirname "$0")"
+mkdir -p ../out/*
 rm ../out/*
 cp *.adoc ../out
 cat rs_system_list.sql | clickhouse-client -mn --config-file config.xml -f "CSVWithNames" >"../out/rs_today.csv"   
