@@ -1,12 +1,22 @@
-* sudo apt-get install ruby-full
+= Установка
+
+== Установка asciidoctor
+
+* apt-get install ruby-full
 * gem install asciidoctor
+
+=== Установка конвертера в pdf
 * apt install openjdk-8-jre-headless
 * git clone https://github.com/asciidoctor/asciidoctor-fop
 * asciidoctor -b docbook -d book -a data-uri! README.adoc
-* sudo vim /etc/java-8-openjdk/accessibility.properties
+* vim /etc/java-8-openjdk/accessibility.properties
 * Comment: assistive_technologies=org.GNOME.Accessibility.AtkWrapper
 * ./fopub README.xml
+
+== Установка шрифтов
 * apt install fontcondig
+
+== Установка clickhouse-client
 * wget -q -O - https://repo.yandex.ru/clickhouse/CLICKHOUSE-KEY.GPG | apt-key add -
 * sudo apt-get update
 * sudo apt-get install clickhouse-client
