@@ -2,6 +2,7 @@
 :doctype: article 
 include::attributes.adoc[]
 = Использование информационных систем Федеральной службы по{nbsp}надзору в{nbsp}сфере транспорта на{nbsp}{todaytime}
+ФКУ «ИВЦ Ространснадзора»
 include::_doc_general_attributes.adoc[]
 :toclevels: 3
 :toc: left
