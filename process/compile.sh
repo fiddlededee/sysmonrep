@@ -14,9 +14,6 @@ cat rs_days.sql | clickhouse-client -mn --config-file config.xml -f "CSV" | sed 
 asciidoctor -b docbook -d book -a doctype=book ../out/report.adoc -D ../out
 asciidoctor -b html5 -d book -a data-uri! ../out/report.adoc -D ../out
 /home/asciidoctor-fopub/fopub ../out/report.xml
-asciidoctor -b docbook -d book -a doctype=article ../out/readme.adoc -D ../out
-asciidoctor -b html5 -d book -a data-uri! ../out/readme.adoc -D ../out
-/home/asciidoctor-fopub/fopub ../out/readme.xml
 echo converted
 
 
