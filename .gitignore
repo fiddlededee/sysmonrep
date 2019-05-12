@@ -1,5 +1,3 @@
-*.*~
-*.pdf
-*.xml
-*.html
-.*.swp
+*~
+*swp
+out/*
