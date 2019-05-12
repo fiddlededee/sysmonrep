@@ -1,7 +1,5 @@
 <config>
-	<host>10.1.5.164</host>
-	<!--port>8123</port-->
-	<user>default</user>
-	<password>123</password>
-	<!--secure>False</secure-->
+	<host></host>
+	<user></user>
+	<password></password>
 </config>
