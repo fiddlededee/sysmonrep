@@ -3,7 +3,7 @@ cd "$(dirname "$0")"
 mkdir -p ../out
 rm ../out/*
 cp *.adoc ../out
-cat rs_system_list.sql | clickhouse-client -mn --config-file config.xml -f "CSVWithNames" >"../out/rs_today.csv"   
+cat rs_system_list_insert.sql | clickhouse-client -mn --config-file config.xml -f "CSVWithNames"    
 cat rs_today.sql | sed 's/today() and today()/today() and today()/g' | clickhouse-client -mn --config-file config.xml -f "CSVWithNames" >"../out/rs_today.csv"   
 cat rs_today.sql | sed 's/today() and today()/today()-1 and today()-1/g' | clickhouse-client -mn --config-file config.xml -f "CSVWithNames" >"../out/rs_yesterday.csv"   
 cat rs_today.sql | sed 's/today() and today()/toMonday(today()) and today()/g' | clickhouse-client -mn --config-file config.xml -f "CSVWithNames" >"../out/rs_week.csv"   
