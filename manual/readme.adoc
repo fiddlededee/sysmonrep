@@ -38,6 +38,19 @@
 * скопируйте config.xml.template в config.xml
 * Введите host, пользователя и пароль в config.xml
 
+== Установка slqlite
+
+* sudo apt install sqlite3
+
+== Установка csvkit
+
+* sudo apt-get install python-pip
+* sudo pip install csvkit
+
+== Установка gnuplot
+
+* apt-get install gnuplot
+
 == Запуск
 
 * /usr/sysmonrep/process/compile.sh

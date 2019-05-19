@@ -1,0 +1,13 @@
+== {module_name}
+
+ifeval::[{records} > 2]
+.{module_name}: график статистики заходов по часам
+image::c{ls_id}.png[{image-100-width}]
+endif::[]
+
+
+.{module_name}: график статистики заходов по часам
+[cols="^1, ^1", options="header"]
+,===
+include::c{ls_id}.csv[]
+,===

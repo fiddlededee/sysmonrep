@@ -1,0 +1,13 @@
+.open ../out/csv2adoc.db
+.read rsl_two_days_create.sql
+.mode csv
+.import ../out/rs_two_days.csv Login
+.import ../out/rs_module_list.csv SysList
+.read rsl_two_days_main.sql
+.output ../out/rsl_hourly.csv 
+select ls_id, hour, cnt from RslHourly order by ls_id asc, event_date desc, hour desc;
+.output ../out/rsl_ls_id_only.csv 
+select ls_id from RslLsIdOnly order by ls_id asc;
+.output ../out/rsl_hourly_adoc.csv 
+select adoc from RslHourlyAdoc order by ls_id asc;
+.exit

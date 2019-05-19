@@ -7,6 +7,10 @@ include::_doc_general_attributes.adoc[]
 :toclevels: 2 
 :toc: left
 
+ifndef::for-print[]
+link:report.pdf[Скачать в формате pdf]
+endif::[]
+
 == Общая статистика входов
 
 === Входы за сегодняшний день ({today})
@@ -52,3 +56,9 @@ include::rs_days.adoc[]
 
 
 |===
+
+
+
+== Статистика заходов по часам ({yesterday} -- {today})
+
+include::rsl_hourly.adoc[leveloffset=+1]
