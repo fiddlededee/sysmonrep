@@ -27,6 +27,6 @@ do
 done
 #compile html and pdf
 asciidoctor -b docbook -d book -a doctype=book ../out/report.adoc -D ../out
-asciidoctor -b html5 -d book -a data-uri! ../out/report.adoc -D ../out
+asciidoctor -b html5 -d book -a data-uri ../out/report.adoc -D ../out
 /home/asciidoctor-fopub/fopub -t ../docbook-xsl ../out/report.xml
 echo converted
