@@ -22,6 +22,7 @@ insert into logs.sys_list (Module, system_name, system_module, ls_id) values ('P
 insert into logs.sys_list (Module, system_name, system_module, ls_id) values ('incidentsZHD', 'АС «Мониторинг»', 'Учет пожаров на ЖДТ', 'a020120_incidents_zhd');;
 insert into logs.sys_list (Module, system_name, system_module, ls_id) values ('ЕРРД', 'ЕРРД', 'ЕРРД', 'a030010_errd');;
 insert into logs.sys_list (Module, system_name, system_module, ls_id) values ('СКАТ-ДИР', 'СКАТ-ДИР', 'СКАТ-ДИР', 'a040010_skatdir');;
+insert into logs.sys_list (Module, system_name, system_module, ls_id) values ('СКАТ-ТК-ЦОД', 'СКАТ-ТК-ЦОД', 'СКАТ-ТК-ЦОД', 'a050010_skattk');;
  
 
 
