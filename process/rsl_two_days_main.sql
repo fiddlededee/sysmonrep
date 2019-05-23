@@ -4,8 +4,8 @@ create table RslHourly (ls_id TEXT, hour TEXT, event_date TEXT, cnt INTEGER);
 insert into RslHourly
 select
 	ls_id
-	,strftime('%d.%m.%Y', login.event_date) || ' ' || strftime('%H', datetime(event_time_stamp/1000, 'unixepoch', 'localtime')) as hour
-	,login.event_date
+	,strftime('%d.%m.%Y', datetime(event_time_stamp/1000, 'unixepoch', 'localtime')) || ' ' || strftime('%H', datetime(event_time_stamp/1000, 'unixepoch', 'localtime')) as hour
+	,datetime(event_time_stamp/1000, 'unixepoch', 'localtime')
 	,count(*) as cnt
 	--, SysList.module_name
 from 
