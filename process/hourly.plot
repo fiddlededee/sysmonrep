@@ -71,7 +71,7 @@ set yr [0:STATS_max * 1.1]
 
 set xdata time
 set timefmt '%d.%m.%Y %H'
-set format x "%m.%d %H:00"
+set format x "%d.%m %H:00"
 
 
 plot  sprintf('%s.csv', fileName) using 1:2 notitle ls 2 with boxes, \
